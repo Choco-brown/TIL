@@ -1,0 +1,45 @@
+@charset "UTF-8";
+.jquery__test {
+  background-color: beige;
+  margin-top: 100px;
+  padding: 10px;
+  text-align: center;
+}
+.css_test .catbox {
+  display: inline-block;
+  padding: 5px;
+}
+.jquery__test .new {
+  /* 새로 추가되는 이미지에 사용할 CSS */
+  position: relative;
+  width: 100px;
+  height: 90px;
+  top: -150px;
+  z-index: 10;
+  padding: 10px;
+}
+
+#kitty {
+  border-radius: 100px;
+}
+button {
+  all: unset;
+  cursor: pointer;
+  background-color: lightpink;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: lightslategray 2px 2px 0px 0px;
+  margin-left: 10px;
+}
+.meaw {
+  background-color: black;
+  color: white;
+  width: 10%;
+  margin: 6px auto;
+  border-radius: 5px;
+  position: relative;
+}
+.hidden {
+  display: none;
+}

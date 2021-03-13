@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>feed and play with cat</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script tyep="text/javascript">
+        $(document).ready(function(){
+            console.log($(".jquery__test").children())
+            const kitty = document.querySelector("#kitty")
+            const meaw = document.querySelector(".meaw")
+
+            var $water=$(".prepend");
+            var $food=$(".before");
+            var $snack=$(".append");
+            var $toy=$(".after");
+
+
+            //물주기
+            $water.click(function getWater(){
+            $(".jquery__test").children().prepend('<img class="new" src="../../resources/img/water.png">')
+            $('.jquery__test .catbox .new').animate({top:-10},500)
+            });
+
+            //밥주기
+            $food.click(function getFood(){
+                $("#kitty").before('<img class="new" src="../../resources/img/cat-food.png">')
+                $('.jquery__test .catbox .new').animate({top:-10},500)
+            });
+            
+            //생선주기
+            $snack.click(function getSnack(){
+                $(".catbox").append('<img class="new" src="../../resources/img/fish.png">')
+                
+                $('.jquery__test .catbox .new').animate({top:-10},500)
+            });
+
+            //장난감 주기
+            $toy.click(function getToy(){
+                $('<img class="new" src="../../resources/img/cat-toy.png">').insertAfter($("#kitty"))
+                $('.jquery__test .catbox .new').animate({top:-10},500)
+                
+            })
+           
+            
+            //고양이만 남기고 전부 지우기
+           $(".remove").click(function remove(){
+               $("img:not('#kitty')").remove();
+           })
+
+            
+
+
+        })
+    </script>
+    <link rel="stylesheet" type="text/css" href="../../resources/css/background.css">
+</head>
+<body>
+    <p><h1>고양이에게 먹이와 장난감을 줍시다!</h1></p>
+    <button type="button" class="food before">밥</button>
+    <button type="button" class="water prepend">물</button>
+    <button type="button" class="snack append">간식</button>
+    <button type="button" class="toy after" >장난감</button>
+    <button type="button" class="remove" >모두 없애기</button>
+    <div class="jquery__test">
+        <div class="catbox">
+            <div class="meaw hidden">
+                야옹💓😻
+            </div>
+            <img name="myCat" src="../../resources/img/kitty.gif" style="width:200px; height: 180px;" id="kitty"/>
+        </div>
+    </div>
+
+</body>
+</html>

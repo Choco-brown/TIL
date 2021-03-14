@@ -11,11 +11,19 @@
             const kitty = document.querySelector("#kitty")
             const meaw = document.querySelector(".meaw")
 
+            // 그림에 커서가 올라갈 때 야옹하기------------
+            function hidden(){
+                meaw.classList.toggle("hidden")
+            }
+            
+            kitty.addEventListener("mouseover",hidden)
+            kitty.addEventListener("mouseout",hidden)
+            //--------------------------------------------
+            
             var $water=$(".prepend");
             var $food=$(".before");
             var $snack=$(".append");
             var $toy=$(".after");
-
 
             //물주기
             $water.click(function getWater(){
@@ -63,11 +71,11 @@
     <button type="button" class="snack append">간식</button>
     <button type="button" class="toy after" >장난감</button>
     <button type="button" class="remove" >모두 없애기</button>
+    <div class="meaw hidden">
+        야옹💓😻
+    </div>
     <div class="jquery__test">
         <div class="catbox">
-            <div class="meaw hidden">
-                야옹💓😻
-            </div>
             <img name="myCat" src="../../resources/img/kitty.gif" style="width:200px; height: 180px;" id="kitty"/>
         </div>
     </div>
